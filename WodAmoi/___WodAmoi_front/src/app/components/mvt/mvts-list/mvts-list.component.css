@@ -1,0 +1,32 @@
+@font-face {
+	font-family: "Capture it";
+	src: url('/capture_it/Capture it.ttf')
+}
+
+.mvt {
+	font-size: 15px;
+}
+
+table {
+		text-align: center;
+}
+
+button {
+	margin-left: 20px;
+}
+
+.mvt:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.btn-dark:hover{
+	background-color: #98760c;
+	color: black;
+}
+
+.categorie {
+	font-size: 25px;
+	color: #98760c;
+}
+

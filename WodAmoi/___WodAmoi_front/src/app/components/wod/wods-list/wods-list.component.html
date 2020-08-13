@@ -1,0 +1,67 @@
+<div class="list row">
+
+<!-- Barre de recherhce et bouton -->
+  <div class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Recherche par nom..."
+        [(ngModel)]="title"
+      />
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-dark"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Rechercher
+        </button>
+      </div>
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-dark"
+          type="button"
+          routerLink="/add"
+        >Ajouter
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Tableau des mouvements -->
+  <table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col" class="categorie">Wod</th>
+        <th scope="col" class="categorie">Date</th>
+        <th scope="col" class="categorie">Type</th>
+        <th scope="col" class="categorie">Niveau</th>
+        <th scope="col" class="categorie">Description</th>
+        <th scope="col" *ngIf="!currentWod"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="wod" *ngFor="let wod of woddis; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveWod(wod, i)"
+      >
+        <th scope="row">{{ wod.title }}</th>
+          <td>{{ wod.date }}</td>
+          <td>{{ wod.categorie }}</td>
+          <td>{{ wod.niveau }}</td>
+          <td>{{ wod.description }}</td>
+      
+          <td><div *ngIf="currentWod">
+        <a class="badge badge-warning" routerLink="/wods/{{ currentWod.id }}">
+          Editer
+        </a>
+      </div></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

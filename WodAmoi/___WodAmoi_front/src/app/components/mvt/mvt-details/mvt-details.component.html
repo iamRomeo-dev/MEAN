@@ -1,0 +1,56 @@
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentMvt" class="edit-form">
+    <form>
+      <div class="form-group">
+        <label for="title">Nom</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentMvt.title"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="poids">Date</label>
+        <input
+          type="text"
+          class="form-control"
+          id="date"
+          [(ngModel)]="currentMvt.date"
+          name="date"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="poids">Poids</label>
+        <input
+          type="text"
+          class="form-control"
+          id="poids"
+          [(ngModel)]="currentMvt.poids"
+          name="poids"
+        />
+      </div>
+      </form>
+
+    <button class="btn btn-dark" (click)="deleteMvt()">
+      Efface
+    </button>
+
+    <button
+      type="submit"
+      class="btn btn-dark"
+      (click)="updateMvt()"
+    >
+      Modifie
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentMvt">
+    <br />
+    <p>Cannot access this mouvement...</p>
+  </div>
+</div>

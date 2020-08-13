@@ -1,0 +1,60 @@
+<p> Pas Bienvenue</p>
+<p *ngIf="currentTraining" >{{currentTraining.description}}</p>
+<p>Bienvenue</p>
+
+<!-- <div style="width: 400px; margin: auto;">
+  <div *ngIf="currentTraining" class="edit-form">
+    <form>
+      <div class="form-group">
+        <label for="title">Training</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentTraining.title"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="poids">Date</label>
+        <input
+          type="text"
+          class="form-control"
+          id="date"
+          [(ngModel)]="currentTraining.date"
+          name="date"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="poids">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentTraining.description"
+          name="description"
+        />
+      </div>
+      </form>
+
+    <button class="btn btn-dark" (click)="deleteTraining()">
+      Effacer
+    </button>
+
+    <button
+      type="submit"
+      class="btn btn-dark"
+      (click)="updateTraining()"
+    >
+      Modifier
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentTraining">
+    <br />
+    <p>Cannot access this mouvement...</p>
+  </div>
+</div> -->

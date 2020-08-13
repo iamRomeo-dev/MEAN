@@ -1,0 +1,68 @@
+<div class="list row">
+
+<!-- Barre de recherhce et bouton -->
+  <div class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Recherche par nom..."
+        [(ngModel)]="title"
+      />
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-dark"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Rechercher
+        </button>
+      </div>
+
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-dark"
+          type="button"
+          routerLink="/addTraining"
+        >Ajouter
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Tableau des mouvements -->
+  <table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col" class="categorie">Training</th>
+        <th scope="col" class="categorie">Date</th>
+        <th scope="col" class="categorie">Equipe</th>
+        <th scope="col" class="categorie">Mouvements</th>
+        <!-- <th scope="col" class="categorie">Description</th> -->
+        <th scope="col" *ngIf="!currentTraining"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="wod" *ngFor="let training of trainys; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveTraining(training, i)"
+      >
+        <th scope="row">{{ training.title }}</th>
+          <td>{{ training.date }}</td>
+          <td>{{ training.equipe }}</td>
+          <td>{{ training.mouvements }}</td>
+         <!--  <td>{{ training.description }}</td> -->
+      
+          <td><div *ngIf="currentTraining">
+        <a class="badge badge-warning" routerLink="/trainings/{{ currentTraining.id }}">
+          Voir
+        </a>
+      </div></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="header">
+  <a href="" class="logo">WodAmoi</a>
+  <!--Affichage menu deroulant burger-->
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <!--Affichage icone burger-->
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+  <ul class="menu">
+    <li><a routerLink="wods">Wod</a></li>
+    <li><a routerLink="mvts">Mouvement</a></li>
+    <li><a routerLink="trainings">Entrainements</a></li>
+    <!--<li><a href="#">Connexion</a></li>-->
+  </ul>
+</div>
+<div class="body">
+    <router-outlet></router-outlet>
+</div>

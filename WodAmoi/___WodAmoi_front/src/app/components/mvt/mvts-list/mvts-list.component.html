@@ -1,0 +1,62 @@
+<div class="list row">
+
+<!-- Barre de recherhce et bouton -->
+  <div class="form-inline">
+    <div class="form-group mx-sm-3 mb-2">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Recherche par nom..."
+        [(ngModel)]="title"
+      />
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-dark"
+          type="button"
+          (click)="searchTitle()"
+        >
+          Rechercher
+        </button>
+      </div>
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-dark"
+          type="button"
+          routerLink="/addMvt"
+        >Ajouter
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+<!-- Tableau des mouvements -->
+  <table class="table table-sm table-dark">
+    <thead>
+      <tr>
+        <th scope="col" class="categorie">Mouvement</th>
+        <th scope="col" class="categorie">Date</th>
+        <th scope="col" class="categorie">Poids</th>
+        <th scope="col" *ngIf="!currentMvt"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="mvt" *ngFor="let mvt of mouvs; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveMvt(mvt, i)"
+      >
+        <th scope="row">{{ mvt.title }}</th>
+          <td>{{ mvt.date }}</td>
+          <td>{{ mvt.poids }}</td>
+          <td><div *ngIf="currentMvt">
+        <a class="badge badge-warning" routerLink="/mvts/{{ currentMvt.id }}">
+          Editer
+        </a>
+      </div></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

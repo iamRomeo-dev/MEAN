@@ -1,0 +1,43 @@
+<div style="width: 400px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label class="titre" for="title">Mouvement</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="mouv.title"
+          name="title"
+        />
+      </div>
+
+   <div class="form-group">
+        <label class="titre" for="poids" >Date</label>
+        <input
+          class="form-control"
+          id="date"
+          required
+          [(ngModel)]="mouv.date"
+          name="poids"
+          placeholder="jj/mm/aaaa"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="titre" for="poids">Poids</label>
+        <input
+          class="form-control"
+          id="poids"
+          required
+          [(ngModel)]="mouv.poids"
+          name="poids"
+        />
+      </div>
+
+      <button (click)="saveMvt()" class="btn btn-dark">Enregistrer</button>
+    </div>
+
+  </div>
+</div>

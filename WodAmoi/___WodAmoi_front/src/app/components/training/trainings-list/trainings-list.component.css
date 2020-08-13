@@ -1,0 +1,27 @@
+.wod {
+	font-size: 15px;
+}
+
+table {
+		text-align: center;
+}
+
+button {
+	margin-left: 20px;
+}
+
+.wod:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.btn-dark:hover{
+	background-color: #98760c;
+	color: black;
+}
+
+.categorie {
+	font-size: 25px;
+	color: #98760c;
+}
+

@@ -1,0 +1,12 @@
+.form-control {
+	background-color: #454d55;
+	color:white;
+}
+
+label {
+	font-size: 25px;
+}
+
+button {
+	margin-right: 10px;
+}

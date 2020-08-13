@@ -1,0 +1,18 @@
+ Partie 1 BACK
+
+-| MEAN (Mongo, Express, Angular, Node) pour enregistrer des entrainements de sport |-
+
+1/Installer Mongodb
+
+2/
+Sur le Fichier dézippé :
+Utiliser PowerShell par exemple => CTL + Shift + Clic Droit => Ouvrir la fenetre Powershell
+
+3/Installer => npm install
+
+3/Lancer => npm run start
+
+4/Lancer le dossier front maintenant...
+
+
+

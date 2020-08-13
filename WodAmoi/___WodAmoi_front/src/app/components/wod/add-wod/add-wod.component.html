@@ -1,0 +1,75 @@
+<div style="width: 400px; margin: auto;">
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label class="titre" for="title">Wod</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="woddy.title"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="titre" for="date" >Date</label>
+        <input
+          class="form-control"
+          id="date"
+          required
+          [(ngModel)]="woddy.date"
+          name="date"
+          placeholder="jj/mm/aaaa"
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="titre" for="categorie">Catégorie</label>
+        <select 
+              class="form-control"
+              id="categorie"
+              required
+              [(ngModel)]="woddy.categorie"
+              name="categorie">
+          <option>EMOM</option>
+          <option>AMRAP</option>
+          <option>FOR TIME</option>
+          <option>TABATA</option>
+          <option>...</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+         <label class="titre" for="niveau">Niveau</label>
+        <select 
+              class="form-control"
+              id="niveau"
+              required
+              [(ngModel)]="woddy.niveau"
+              name="niveau">
+          <option>RX</option>
+          <option>INT</option>
+          <option>SCALED</option>
+          <option>BABY jojo</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+          <label class="titre" for="description">Description</label>
+          <textarea 
+                class="form-control"
+                id="description"
+                required
+                [(ngModel)]="woddy.description"
+                name="description">
+          </textarea>
+        </div>
+
+      <button (click)="saveWod()" class="btn btn-dark">Enregistrer</button>
+    </div>
+
+  </div>
+</div>

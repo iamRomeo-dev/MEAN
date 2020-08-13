@@ -1,0 +1,17 @@
+.form-control {
+	background-color: #454d55;
+	color:white;
+}
+
+label {
+	font-size: 25px;
+}
+
+.btn-dark:hover{
+	background-color: #98760c;
+	color: black;
+}
+
+.titre {
+	font-size: 20px;
+}

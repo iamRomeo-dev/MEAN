@@ -1,0 +1,127 @@
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentWod" class="edit-form">
+    <form>
+      <div class="form-group">
+        <label for="title">Wod</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentWod.title"
+          name="title"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="poids">Date</label>
+        <input
+          type="text"
+          class="form-control"
+          id="date"
+          [(ngModel)]="currentWod.date"
+          name="date"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="poids">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentWod.description"
+          name="description"
+        />
+      </div>
+      </form>
+      
+
+    
+    <button class="btn btn-dark" (click)="deleteWod()">
+      Effacer
+    </button>
+
+    <button
+      type="submit"
+      class="btn btn-dark"
+      (click)="updateWod()"
+    >
+      Modifier
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentWod">
+    <br />
+    <p>Cannot access this mouvement...</p>
+  </div>
+</div>
+
+
+
+<!-- <div style="width: 400px; margin: auto;">
+  <div *ngIf="currentWod" class="edit-form">
+    <h4>Wod</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentWod.title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentWod.description"
+          name="description"
+        />
+      </div>
+
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentWod.published ? "Publié" : "En attente" }}
+      </div>
+    </form>
+
+    <button
+      class="badge badge-primary mr-2"
+      *ngIf="currentWod.published"
+      (click)="updatePublished(false)"
+    >
+      Caduc
+    </button>
+    <button
+      *ngIf="!currentWod.published"
+      class="badge badge-primary mr-2"
+      (click)="updatePublished(true)"
+    >
+      Validé
+    </button>
+
+    <button class="badge badge-danger mr-2" (click)="deleteWod()">
+      Efface
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success"
+      (click)="updateWod()"
+    >
+      Modifie
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentWod">
+    <br />
+    <p>Cannot access this wod...</p>
+  </div>
+</div>
+ -->
